@@ -105,15 +105,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighbors: []
   spriteListe:
-  - {fileID: 21300000, guid: 1052d0a6774505c41945ad99754f4b88, type: 3}
-  - {fileID: 21300000, guid: 1705af84e3dc3ac429c553d36669c1e6, type: 3}
-  - {fileID: 21300000, guid: 22a3154a1c3d5ee45a6e12a58b9c456b, type: 3}
-  - {fileID: 21300000, guid: 82ed1e053be57f549b5eb358c90fef42, type: 3}
-  - {fileID: 21300000, guid: 58b5107875d754340b626654aaee5508, type: 3}
-  - {fileID: 21300000, guid: c56d36ef8a517f742b03c80de8780d3b, type: 3}
-  - {fileID: 21300000, guid: 23f404fb4f8fccf46907a55d19b56188, type: 3}
-  - {fileID: 21300000, guid: 0da126b8661e35d4da151d491f4fc180, type: 3}
-  - {fileID: 21300000, guid: 574ca49f6c965d14cb4f2f8e4ab7db4d, type: 3}
+  - {fileID: 21300000, guid: ab885171c474084469c851a57045ef8a, type: 3}
+  - {fileID: 21300000, guid: 24412ac3d895f8d4693b2230eacbbd3c, type: 3}
+  - {fileID: 21300000, guid: d29afe8efb37d1c4796be4ff44a15b4b, type: 3}
+  - {fileID: 21300000, guid: 14b877a0207a68d46bdba50a52093099, type: 3}
+  - {fileID: 21300000, guid: 986d2867604ecbd489946351e08f5b68, type: 3}
+  - {fileID: 21300000, guid: a8207611d2607464dbfbb81136357eba, type: 3}
+  - {fileID: 21300000, guid: 2877adff494ecf844b07eb89972ae9f2, type: 3}
+  - {fileID: 21300000, guid: f90cbdf708294794190162cd6206f9a5, type: 3}
   AcikYolSprite: {fileID: 21300000, guid: 7834c60414c72f24c92beb8fdb012b52, type: 3}
 --- !u!114 &53272787065116801
 MonoBehaviour:
