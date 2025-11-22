@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Path : MonoBehaviour
 {
@@ -125,12 +126,11 @@ public class Path : MonoBehaviour
 
     public void HidePath(Grid grid)
     {
-
         foreach (var item in grid.nodes)
         {
                 item.EskiSpriteyeDon();
         }
-
+        path[0].AcikYol();
     }
     public void CevaplarPath(List<Node> Nodes)
     {

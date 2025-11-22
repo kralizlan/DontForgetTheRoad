@@ -39,10 +39,9 @@ public class DynamicGridLayout : MonoBehaviour
         // Hücre oranlarını kontrol et
         LimitCellRatio(ref cellWidth, ref cellHeight);
 
-        // **Spacing değerini hücre boyutuna bağlı ayarla**
-        gridLayout.spacing = new Vector2(cellWidth * spacingFactor, cellHeight * spacingFactor);
+//      gridLayout.spacing = new Vector2(cellWidth * spacingFactor, cellHeight * spacingFactor);
+        gridLayout.spacing = Vector2.zero;
 
-        // Güncellenmiş hücre boyutlarını uygula
         gridLayout.cellSize = new Vector2(cellWidth, cellHeight);
     }
 
