@@ -16,13 +16,14 @@ public class AdManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         MobileAds.Initialize(initStatus =>
         {
+            LoadBanner();
             LoadInterstitial();
             LoadRewardedInterstitial();   // YENİ
         });
-
     }
     private void Start()
     {
+        ShowBanner();
         Application.targetFrameRate = 60;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -146,6 +147,41 @@ string rInterstitialId = "unused";
         }
     }
 
+
+    #endregion
+
+
+    #region Banner
+
+    BannerView banner;
+    void LoadBanner()
+    {
+#if UNITY_ANDROID
+        string bannerId = "ca-app-pub-7163425476823301/3236177625"; // kendi banner ID
+#elif UNITY_IOS
+    string bannerId = "ca-app-pub-7163425476823301/3236177625";
+#else
+    string bannerId = "unused";
+#endif
+
+        if (banner != null)
+        {
+            banner.Destroy();
+            banner = null;
+        }
+
+        banner = new BannerView(bannerId, AdSize.Banner, AdPosition.Bottom);
+        var req = new AdRequest();
+        banner.LoadAd(req);
+    }
+    public void ShowBanner()
+    {
+        banner?.Show();
+    }
+    public void HideBanner()
+    {
+        banner?.Hide();
+    }
 
     #endregion
 

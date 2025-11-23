@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Oyuncu : MonoBehaviour
 {
-    private int CanSayisi;
+    public int CanSayisi;
     private int AltinMiktari;
     public int Skor;
     private float SkorCarpani;

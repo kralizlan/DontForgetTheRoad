@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -47,7 +46,7 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
             Answer.instance.CevapEkle(this);
             isTouchHeld = true;
         }
-        else
+        else if (!Game.instance.gameOver)
         {
             TimerDisplay.instance.BolumBaslat();
             Answer.instance.CevapEkle(this);

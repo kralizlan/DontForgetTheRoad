@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Answer : MonoBehaviour
@@ -28,21 +29,23 @@ public class Answer : MonoBehaviour
     {
         return Cevaplar;
     }
-  
+
     public void CevapEkle(Node node)
     {
         CheckCevap(node);
         Cevaplar.Add(node);
     }
-  
+
     public void ResetCevaplar()
     {
         Cevaplar.Clear();
         DogruCevaplar.Clear();
     }
-  
+
     public void CheckCevap(Node node)
     {
+      
+
         if (Path.instance.path.Count == CevapSayisi)
         {
             return;
@@ -65,6 +68,7 @@ public class Answer : MonoBehaviour
         }
         else
         {
+            if(CevapSayisi == 0)return;
             foreach (var item in Cevaplar)
             {
                 if (item == node)
@@ -72,15 +76,15 @@ public class Answer : MonoBehaviour
                     return;
                 }
             }
-          node.RastgeleSpriteAta();   
+            node.RastgeleSpriteAta();
             AudioManager.instance.YanlisTiklamaSesiCal();
             Oyuncu.instance.CanAzalt();
-          StartCoroutine(  AyniBolumuYenidenBaslat());
-
+            StartCoroutine(AyniBolumuYenidenBaslat());
         }
     }
     private IEnumerator AyniBolumuYenidenBaslat()
     {
+        if (Oyuncu.instance.CanSayisi == 0) yield break;
         Game.instance.isStarting = false;
         yield return new WaitForSeconds(1f);
         Game.instance.isStarting = true;

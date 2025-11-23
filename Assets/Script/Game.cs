@@ -5,6 +5,7 @@ public class Game : MonoBehaviour
 {
     public static Game instance;
     public bool isStarting;
+    public bool gameOver = false;
     public int difficulty;
     public bool isPause;
     public GameObject GameOverCanvas;
@@ -23,22 +24,6 @@ public class Game : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Oyuncu.instance.CanEkle();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Oyuncu.instance.CanAzalt();
-        }
-        if (Input.GetKeyDown(KeyCode.RightShift))
-        {
-            ComboBar.instance.AddCombo(0.15f);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            Oyuncu.instance.SkorEkle();
-        }
         LevelManager.instance.LevelUp();
     }
     public void PauseGame()
@@ -107,10 +92,9 @@ public class Game : MonoBehaviour
 
     }
 
-
-
     public void NewGame()
     {
+        Time.timeScale = 1;
         TimerDisplay.instance.NewGame();
         Grid.instance.CreatePath();
         Answer.instance.NewGame();
@@ -121,14 +105,14 @@ public class Game : MonoBehaviour
     public void GameOver()
     {
         isStarting = false;
+        gameOver = true;
+        Time.timeScale = 0;
         GameOverCanvas.gameObject.SetActive(true);
-     //   AdManager.instance.ShowBannerAd();
-
-
-
-        //     Path.instance.ShowPath();
+        //   AdManager.instance.ShowBannerAd();
+        Path.instance.ShowPath(Grid.instance);
     }
-    public void YenidenDevamEt()
+
+    public void ReklamliYenidenDevamEt()
     {
         isStarting = true;
         GameOverCanvas.gameObject.SetActive(false);
@@ -136,6 +120,6 @@ public class Game : MonoBehaviour
         Oyuncu.instance.CanEkle();
         TimerDisplay.instance.NewGame();
         Path.instance.CevaplarPath(Answer.instance.DogruCevaplar);
-
     }
+
 }
