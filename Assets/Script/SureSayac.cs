@@ -59,7 +59,8 @@ public class TimerDisplay : MonoBehaviour
     {
         Game.instance.isStarting = true;
         SayacAzalsinMi = false;
-        Path.instance.HidePath(Grid.instance);
+        Path.instance.HidePath(Grid.instance, true);
+
         Path.instance.CevaplarPath(Answer.instance.DogruCevaplar);
         elapsedTime = 0;
     }

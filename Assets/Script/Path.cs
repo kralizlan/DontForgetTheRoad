@@ -124,13 +124,18 @@ public class Path : MonoBehaviour
         }
     }
 
-    public void HidePath(Grid grid)
+    public void HidePath(Grid grid,bool bulutgecisi=false)
     {
         foreach (var item in grid.nodes)
         {
-                item.EskiSpriteyeDon();
+            item.EskiSpriteyeDon();
+            if (bulutgecisi)
+            {
+                item.AlphaBekleVeAc(0,0.5f);
+            }
         }
         path[0].AcikYol();
+        
     }
     public void CevaplarPath(List<Node> Nodes)
     {

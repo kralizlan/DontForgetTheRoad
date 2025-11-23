@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using UnityEditor.ShaderGraph.Internal;
+using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
 public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler
@@ -11,10 +13,10 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     private static bool isTouchHeld = false;
 
-    public List<Node> neighbors = new List<Node>();
+    [HideInInspector] public List<Node> neighbors = new List<Node>();
 
     private Image uiImage;
-
+     
     [SerializeField] private List<Sprite> spriteListe = new List<Sprite>();
     [SerializeField] Sprite AcikYolSprite;
     private Sprite orijinalSprite;
@@ -25,7 +27,10 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         if (uiImage != null)
             orijinalSprite = uiImage.sprite;
     }
-
+    private void Start()
+    {
+        AlphaBekleVeAc();
+    }
     public List<Node> FindNeighbors(Node[,] grid, int rowCount, int columnCount)
     {
         if (x > 0) neighbors.Add(grid[x - 1, y]);          // Sol
@@ -63,16 +68,19 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         }
     }
 
-    public void ChangeColor(Color newColor)
+    public void AlphaBekleVeAc(float x = 0.5f, float y = 1f)
     {
-        if (uiImage != null)
-        {
-           uiImage.color = newColor;
-        }
-        else
-        {
-            Debug.LogError("Image bileşeni bulunamadı!");
-        }
+        StartCoroutine(_AlphaBekleVeAc(x,y));
+    }
+    private IEnumerator _AlphaBekleVeAc(float x,float y)
+    {
+        if (uiImage == null) yield break;
+
+        uiImage.canvasRenderer.SetAlpha(0f); // Başta görünmez
+
+        yield return new WaitForSeconds(x); // 1 sn bekle
+
+        uiImage.CrossFadeAlpha(1, y, false); // 1 sn’de alpha 1 olsun
     }
 
     #region Resimler Yol Gizleme
@@ -107,4 +115,5 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         uiImage.sprite = AcikYolSprite;
     }
     #endregion
+
 }

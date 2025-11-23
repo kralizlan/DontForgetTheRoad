@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -71,12 +72,25 @@ public class Answer : MonoBehaviour
                     return;
                 }
             }
-            node.RastgeleSpriteAta();   
+          node.RastgeleSpriteAta();   
             AudioManager.instance.YanlisTiklamaSesiCal();
             Oyuncu.instance.CanAzalt();
+          StartCoroutine(  AyniBolumuYenidenBaslat());
+
         }
     }
-
-
+    private IEnumerator AyniBolumuYenidenBaslat()
+    {
+        Game.instance.isStarting = false;
+        yield return new WaitForSeconds(1f);
+        Game.instance.isStarting = true;
+        TimerDisplay.instance.NewGame();
+        NewGame();
+        Path.instance.ShowPath(Grid.instance);
+        foreach (var item in Grid.instance.nodes)
+        {
+            item.AlphaBekleVeAc();
+        }
+    }
 
 }
