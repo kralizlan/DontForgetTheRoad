@@ -30,15 +30,18 @@ public class Game : MonoBehaviour
     {
         Time.timeScale = 0;
         isPause = true;
+        AdManager.Instance.ShowBanner();
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
         isPause = false;
+        AdManager.Instance.HideBanner();
     }
 
     public void StartGame()
     {
+        AdManager.Instance.HideBanner();
 
         switch (difficulty)
         {
@@ -94,6 +97,7 @@ public class Game : MonoBehaviour
 
     public void NewGame()
     {
+        AdManager.Instance.HideBanner();
         Time.timeScale = 1;
         TimerDisplay.instance.NewGame();
         Grid.instance.CreatePath();
@@ -104,6 +108,7 @@ public class Game : MonoBehaviour
 
     public void GameOver()
     {
+        AdManager.Instance.ShowBanner();
         isStarting = false;
         gameOver = true;
         Time.timeScale = 0;
