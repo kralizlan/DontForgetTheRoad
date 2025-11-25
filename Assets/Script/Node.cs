@@ -1,22 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class SpriteCifti
+{
+    public Sprite figur;      // araba, gemi, vs.
+    public Sprite arkaPlan;   // o figüre özel arka plan
+}
+
 [RequireComponent(typeof(Image))]
 public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler
 {
+    [SerializeField] private List<SpriteCifti> spriteCiftleri;
+    private Sprite secilenFigur;
+    [HideInInspector] public Sprite secilenArkaPlan;
+
+    private Image uiImage;
     public int y { get; set; }
     public int x { get; set; }
-
     private static bool isTouchHeld = false;
 
     [HideInInspector] public List<Node> neighbors = new List<Node>();
 
-    private Image uiImage;
-     
-    [SerializeField] private List<Sprite> spriteListe = new List<Sprite>();
     [SerializeField] Sprite AcikYolSprite;
     private Sprite orijinalSprite;
 
@@ -69,9 +78,9 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     public void AlphaBekleVeAc(float x = 0.5f, float y = 1f)
     {
-        StartCoroutine(_AlphaBekleVeAc(x,y));
+        StartCoroutine(_AlphaBekleVeAc(x, y));
     }
-    private IEnumerator _AlphaBekleVeAc(float x,float y)
+    private IEnumerator _AlphaBekleVeAc(float x, float y)
     {
         if (uiImage == null) yield break;
 
@@ -89,19 +98,23 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     public void RastgeleSpriteAta()
     {
+        if (uiImage == null) uiImage = GetComponent<Image>();
         if (uiImage == null) return;
-        if (spriteListe == null || spriteListe.Count == 0) return;
+        if (spriteCiftleri == null || spriteCiftleri.Count == 0) return;
+
         if (zatenSecildi)
         {
-            uiImage.sprite = rastgeleSecilenSprite;
+            uiImage.sprite = secilenFigur;
             return;
         }
 
-        rastgeleSecilenSprite = spriteListe[Random.Range(0, spriteListe.Count)];
-        uiImage.sprite = rastgeleSecilenSprite;
-
+        int idx = UnityEngine.Random.Range(0, spriteCiftleri.Count);
+        secilenFigur = spriteCiftleri[idx].figur;
+        secilenArkaPlan = spriteCiftleri[idx].arkaPlan; // BACKGROUND BURADA KAYIT
+        uiImage.sprite = secilenFigur;
         zatenSecildi = true;
     }
+
 
     public void EskiSpriteyeDon()
     {

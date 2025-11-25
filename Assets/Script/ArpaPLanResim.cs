@@ -11,10 +11,7 @@ public class ArpaPLanResim : MonoBehaviour
     void Start()
     {
         int seviye = PlayerPrefs.GetInt("SelectedLevel", 0);
-        if (seviye >= 0 && seviye < Resimler.Length)
-        {
-            ArkaPlan.GetComponent<Image>().sprite = Resimler[seviye];
-        }
+        ArkaPlan.GetComponent<Image>().sprite = Resimler[seviye-1];
     }
 
 

@@ -103,17 +103,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869b94063369ec14e9ea6474464f74df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteCiftleri:
+  - figur: {fileID: 21300000, guid: ab885171c474084469c851a57045ef8a, type: 3}
+    arkaPlan: {fileID: 21300000, guid: f165a72ffea36ac4eaac9cf0aa607a94, type: 3}
+  - figur: {fileID: 21300000, guid: 24412ac3d895f8d4693b2230eacbbd3c, type: 3}
+    arkaPlan: {fileID: 21300000, guid: 01624bacba4f5b94884656bfa89144b1, type: 3}
+  - figur: {fileID: 21300000, guid: d29afe8efb37d1c4796be4ff44a15b4b, type: 3}
+    arkaPlan: {fileID: 21300000, guid: 6ab18ff846d081941870587371f01a7c, type: 3}
+  - figur: {fileID: 21300000, guid: 14b877a0207a68d46bdba50a52093099, type: 3}
+    arkaPlan: {fileID: 21300000, guid: ed28493cdfe00bc439ef7755c60d9622, type: 3}
+  - figur: {fileID: 21300000, guid: 986d2867604ecbd489946351e08f5b68, type: 3}
+    arkaPlan: {fileID: 21300000, guid: 49fd75fac32c8ae49953d6ed731e0cd3, type: 3}
+  - figur: {fileID: 21300000, guid: a8207611d2607464dbfbb81136357eba, type: 3}
+    arkaPlan: {fileID: 21300000, guid: d2d698623d246ac4cbfca12bc2461c01, type: 3}
+  - figur: {fileID: 21300000, guid: 2877adff494ecf844b07eb89972ae9f2, type: 3}
+    arkaPlan: {fileID: 21300000, guid: 2877adff494ecf844b07eb89972ae9f2, type: 3}
+  - figur: {fileID: 21300000, guid: f90cbdf708294794190162cd6206f9a5, type: 3}
+    arkaPlan: {fileID: 21300000, guid: f90cbdf708294794190162cd6206f9a5, type: 3}
   neighbors: []
-  spriteListe:
-  - {fileID: 21300000, guid: ab885171c474084469c851a57045ef8a, type: 3}
-  - {fileID: 21300000, guid: 24412ac3d895f8d4693b2230eacbbd3c, type: 3}
-  - {fileID: 21300000, guid: d29afe8efb37d1c4796be4ff44a15b4b, type: 3}
-  - {fileID: 21300000, guid: 14b877a0207a68d46bdba50a52093099, type: 3}
-  - {fileID: 21300000, guid: 986d2867604ecbd489946351e08f5b68, type: 3}
-  - {fileID: 21300000, guid: a8207611d2607464dbfbb81136357eba, type: 3}
-  - {fileID: 21300000, guid: 2877adff494ecf844b07eb89972ae9f2, type: 3}
-  - {fileID: 21300000, guid: f90cbdf708294794190162cd6206f9a5, type: 3}
   AcikYolSprite: {fileID: 21300000, guid: 7834c60414c72f24c92beb8fdb012b52, type: 3}
+  arkaPlanSprite: {fileID: 0}
 --- !u!114 &53272787065116801
 MonoBehaviour:
   m_ObjectHideFlags: 0

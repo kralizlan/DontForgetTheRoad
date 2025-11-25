@@ -31,13 +31,14 @@ public class PauseCanvas : MonoBehaviour
     }
     public void PauseGame()
     {
-   //     AdManager.instance.ShowBannerAd();
+        //     AdManager.instance.ShowBannerAd();
         Game.instance.PauseGame();
         Path.instance.HidePath(Grid.instance);
         Pausecanvas.gameObject.SetActive(true);
     }
-    public void ResumeGame() {
-      //  AdManager.instance.HideBannerAd();
+    public void ResumeGame()
+    {
+        //  AdManager.instance.HideBannerAd();
         Game.instance.ResumeGame();
         Pausecanvas.gameObject.SetActive(false);
         BolumBittiCanvas.gameObject.SetActive(false);
@@ -45,6 +46,7 @@ public class PauseCanvas : MonoBehaviour
     }
     public void AnaMenu()
     {
+        AdManager.Instance.ShowBanner();
         Game.instance.ResumeGame();
         Game.instance.LevelUpBildirisi.SetActive(false);
         ComboBar.instance.NewGame();
@@ -52,7 +54,7 @@ public class PauseCanvas : MonoBehaviour
     }
     public void Restart()
     {
-       
+
         Game.instance.ResumeGame();
         SceneManager.LoadScene(1); // Hedef sahneye git
     }
@@ -84,7 +86,7 @@ public class PauseCanvas : MonoBehaviour
     }
     public void OdulluDevamEt()
     {
-      //  AdManager.instance.ShowInterstitialAd();
+        //  AdManager.instance.ShowInterstitialAd();
     }
     public void NextLevel()
     {

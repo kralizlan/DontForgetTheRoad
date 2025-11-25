@@ -134,7 +134,7 @@ public class Path : MonoBehaviour
                 item.AlphaBekleVeAc(0,0.5f);
             }
         }
-        path[0].AcikYol();
+    //    path[0].AcikYol();
         
     }
     public void CevaplarPath(List<Node> Nodes)

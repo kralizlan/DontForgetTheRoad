@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Oyuncu : MonoBehaviour
 {
+    [SerializeField] GameObject GameoverScreen;
     public int CanSayisi;
     private int AltinMiktari;
     public int Skor;
@@ -38,11 +39,12 @@ public class Oyuncu : MonoBehaviour
         SkorYazdir();
     }
 
-    public void CanAzalt()
+    public void CanAzalt(Node x)
     {
 
         if (CanSayisi == 1)
         {
+            GameoverScreen.GetComponent<Image>().sprite = x.secilenArkaPlan;
             Game.instance.GameOver();
         }
         CanSistemi.instance.CanAzalt(CanSayisi - 1);

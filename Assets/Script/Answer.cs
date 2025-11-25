@@ -42,17 +42,73 @@ public class Answer : MonoBehaviour
         DogruCevaplar.Clear();
     }
 
-    public void CheckCevap(Node node)
+    //path[0].AcikYol(); duzelt Path.HidePath
+    //public void CheckCevap(Node node)  
+    //{
+
+
+    //    if (Path.instance.path.Count == CevapSayisi)
+    //    {
+    //        return;
+    //    }
+
+    //    if (Path.instance.path[CevapSayisi] == node)
+    //    {
+    //        AudioManager.instance.TiklamaSesiCal();
+    //        DogruCevaplar.Add(node);
+    //        ++CevapSayisi;
+    //        cevapDogruMu = true;
+    //        ComboBar.instance.AddCombo(0.15f);
+    //        Oyuncu.instance.SkorEkle();
+    //        node.AcikYol();
+    //        if (Path.instance.path.Count == CevapSayisi)
+    //        {
+    //            Game.instance.NewGame();
+    //            return;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        if(CevapSayisi == 0)return;
+    //        foreach (var item in Cevaplar)
+    //        {
+    //            if (item == node)
+    //            {
+    //                return;
+    //            }
+    //        }
+    //        node.RastgeleSpriteAta();
+    //        AudioManager.instance.YanlisTiklamaSesiCal();
+    //        Oyuncu.instance.CanAzalt();
+    //        StartCoroutine(AyniBolumuYenidenBaslat());
+    //    }
+    //} //eski
+
+    public void CheckCevap(Node node) //yeni
     {
-      
 
         if (Path.instance.path.Count == CevapSayisi)
         {
             return;
         }
-
-        if (Path.instance.path[CevapSayisi] == node)
+        foreach (var item in DogruCevaplar)
         {
+            if (node==item)
+            {
+                return;
+            }
+        }
+        cevapDogruMu = false;
+        foreach (var item in Path.instance.path)
+        {
+            if (item == node)
+            {
+                cevapDogruMu = true;
+            }
+        }
+        if (cevapDogruMu)
+        {
+
             AudioManager.instance.TiklamaSesiCal();
             DogruCevaplar.Add(node);
             ++CevapSayisi;
@@ -68,7 +124,7 @@ public class Answer : MonoBehaviour
         }
         else
         {
-            if(CevapSayisi == 0)return;
+            if (CevapSayisi == 0) return;
             foreach (var item in Cevaplar)
             {
                 if (item == node)
@@ -78,10 +134,11 @@ public class Answer : MonoBehaviour
             }
             node.RastgeleSpriteAta();
             AudioManager.instance.YanlisTiklamaSesiCal();
-            Oyuncu.instance.CanAzalt();
+            Oyuncu.instance.CanAzalt(node);
             StartCoroutine(AyniBolumuYenidenBaslat());
         }
     }
+
     private IEnumerator AyniBolumuYenidenBaslat()
     {
         if (Oyuncu.instance.CanSayisi == 0) yield break;
@@ -96,5 +153,7 @@ public class Answer : MonoBehaviour
             item.AlphaBekleVeAc();
         }
     }
+
+
 
 }

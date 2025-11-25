@@ -7,7 +7,7 @@ public class AdManager : MonoBehaviour
 {
     public static AdManager Instance;
     private int _sceneLoadCount = 0;
-    private const int ShowInterstitialAfterScenes = 3;
+    private const int ShowInterstitialAfterScenes = 4;
 
     void Awake()
     {
