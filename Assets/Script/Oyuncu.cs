@@ -65,14 +65,20 @@ public class Oyuncu : MonoBehaviour
 
     }
 
-    public void SkorEkle()
+    public void eskiSkorEkle()
     {
         SkorCarpani = image.fillAmount + 1;
         float artir = 10 * SkorCarpani;
         Skor += Convert.ToInt32(artir);
         SkorYazdir();
     }
+    public void SkorEkle()
+    {
+        ++Skor;
+        SkorYazdir();
+        LevelManager.instance.LevelUp();
 
+    }
     public void SkorYazdir()
     {
         SkorTxt.text = Skor.ToString();

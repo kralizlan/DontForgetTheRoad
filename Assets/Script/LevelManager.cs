@@ -32,9 +32,8 @@ public class LevelManager : MonoBehaviour
 
     public void LevelUp()
     {
-        if (PlayerPrefs.GetInt("SelectedLevel", 0) == Level && Oyuncu.instance.Skor >= 1000)
+        if (PlayerPrefs.GetInt("SelectedLevel", 0) == Level && Oyuncu.instance.Skor >= 10)
         {
-            Debug.Log("level atladim");
             ++Level;
             PlayerPrefs.SetInt("Level", Level);
             PlayerPrefs.Save();

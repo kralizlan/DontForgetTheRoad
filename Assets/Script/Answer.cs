@@ -114,10 +114,10 @@ public class Answer : MonoBehaviour
             ++CevapSayisi;
             cevapDogruMu = true;
             ComboBar.instance.AddCombo(0.15f);
-            Oyuncu.instance.SkorEkle();
             node.AcikYol();
             if (Path.instance.path.Count == CevapSayisi)
             {
+                Oyuncu.instance.SkorEkle();
                 Game.instance.NewGame();
                 return;
             }

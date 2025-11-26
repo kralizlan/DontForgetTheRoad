@@ -24,7 +24,6 @@ public class Game : MonoBehaviour
     }
     private void Update()
     {
-        LevelManager.instance.LevelUp();
     }
     public void PauseGame()
     {

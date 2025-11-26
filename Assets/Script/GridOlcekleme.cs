@@ -29,8 +29,6 @@ public class DynamicGridLayout : MonoBehaviour
         float panelWidth = panelRect.rect.width;
         float panelHeight = panelRect.rect.height;
 
-        // Spacing oranı (Hücre boyutuna göre %10 boşluk)
-        float spacingFactor = 0.1f; // %10 boşluk bırak
 
         // Spacing hariç hücre genişliği ve yüksekliği hesapla
         float cellWidth = (panelWidth - ((columnCount - 1) * gridLayout.spacing.x)) / columnCount;
