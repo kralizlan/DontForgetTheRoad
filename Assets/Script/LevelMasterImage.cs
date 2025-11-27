@@ -5,13 +5,18 @@ public class LevelMasterImage : MonoBehaviour
 {
     [SerializeField] private Sprite Kilitli;
     [SerializeField] private Sprite Kilitsiz;
+    [SerializeField] private Sprite Basarili;
     [SerializeField] private int lvl;
 
     private void Awake()
     {
         Image myImage = GetComponent<Image>();
 
-        if (PlayerPrefs.GetInt("Level",0)>=lvl)
+        if (PlayerPrefs.GetInt("Level", 0) >= lvl)
+        {
+            myImage.sprite = Basarili; // Yeni görseli ata
+        }
+        if (PlayerPrefs.GetInt("Level", 0) == lvl)
         {
             myImage.sprite = Kilitsiz; // Yeni görseli ata
         }
