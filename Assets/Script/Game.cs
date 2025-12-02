@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Game : MonoBehaviour
@@ -22,8 +23,16 @@ public class Game : MonoBehaviour
         StartGame();
         Grid.instance.CreatePath();
     }
-    private void Update()
+
+    public void Bekle(float sure, System.Action tamamlaninca)
     {
+        StartCoroutine(BeklemeRoutine(sure, tamamlaninca));
+    }
+
+    IEnumerator BeklemeRoutine(float sure, System.Action tamamlaninca)
+    {
+        yield return new WaitForSeconds(sure);
+        tamamlaninca?.Invoke();
     }
     public void PauseGame()
     {
@@ -110,17 +119,20 @@ public class Game : MonoBehaviour
         AdManager.Instance.ShowBanner();
         isStarting = false;
         gameOver = true;
-        Time.timeScale = 0;
-        GameOverCanvas.gameObject.SetActive(true);
-        //   AdManager.instance.ShowBannerAd();
         Path.instance.ShowPath(Grid.instance);
+        Bekle(1f, GameoverCanvasAc);
+    }
+    public void GameoverCanvasAc()
+    {
+        GameOverCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void ReklamliYenidenDevamEt()
     {
         isStarting = true;
         GameOverCanvas.gameObject.SetActive(false);
-  //    AdManager.instance.HideBannerAd();
+        //    AdManager.instance.HideBannerAd();
         Oyuncu.instance.CanEkle();
         TimerDisplay.instance.NewGame();
         Path.instance.CevaplarPath(Answer.instance.DogruCevaplar);

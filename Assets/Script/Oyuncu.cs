@@ -44,7 +44,8 @@ public class Oyuncu : MonoBehaviour
 
         if (CanSayisi == 1)
         {
-            GameoverScreen.GetComponent<Image>().sprite = x.secilenArkaPlan;
+            GameoverScreen.GetComponent < Image>().sprite = x.secilenArkaPlan;
+            Game.instance.Bekle(1f, Game.instance.GameoverCanvasAc);
             Game.instance.GameOver();
         }
         CanSistemi.instance.CanAzalt(CanSayisi - 1);

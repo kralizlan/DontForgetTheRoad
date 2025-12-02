@@ -120,9 +120,12 @@ MonoBehaviour:
     arkaPlan: {fileID: 21300000, guid: 102836b18ff12424da3e63043c541b54, type: 3}
   - figur: {fileID: 21300000, guid: f90cbdf708294794190162cd6206f9a5, type: 3}
     arkaPlan: {fileID: 21300000, guid: fe5f1b3bddf1b5647a848aacc617a8a6, type: 3}
+  - figur: {fileID: 21300000, guid: 0ea946b044fa7db4baebdf7c4c5261bf, type: 3}
+    arkaPlan: {fileID: 0}
   secilenArkaPlan: {fileID: 0}
   neighbors: []
   AcikYolSprite: {fileID: 21300000, guid: 7834c60414c72f24c92beb8fdb012b52, type: 3}
+  fenerMi: 0
 --- !u!114 &53272787065116801
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -28,6 +28,9 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     [SerializeField] Sprite AcikYolSprite;
     private Sprite orijinalSprite;
+    public bool fenerMi;
+
+
 
     private void Awake()
     {
@@ -50,6 +53,7 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
     public void OnPointerDown(PointerEventData eventData)
     {
+
         if (Game.instance.isStarting)
         {
             Answer.instance.CevapEkle(this);
@@ -76,6 +80,7 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         }
     }
 
+    #region Resimler Yol Gizleme
     public void AlphaBekleVeAc(float x = 0.5f, float y = 1f)
     {
         StartCoroutine(_AlphaBekleVeAc(x, y));
@@ -91,11 +96,7 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         uiImage.CrossFadeAlpha(1, y, false); // 1 sn’de alpha 1 olsun
     }
 
-    #region Resimler Yol Gizleme
-
     private bool zatenSecildi = false;
-    private Sprite rastgeleSecilenSprite;
-
     public void RastgeleSpriteAta()
     {
         if (uiImage == null) uiImage = GetComponent<Image>();
@@ -109,13 +110,32 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
         }
 
         int idx = UnityEngine.Random.Range(0, spriteCiftleri.Count);
-        secilenFigur = spriteCiftleri[idx].figur;
-        secilenArkaPlan = spriteCiftleri[idx].arkaPlan; // BACKGROUND BURADA KAYIT
+        var cift = spriteCiftleri[idx];
+
+        // PATH üzerindeyse Fener seçme
+        bool pathUzerinde = Path.instance.path.Contains(this);
+
+        if (pathUzerinde && cift.figur.name == "Fener")
+        {
+            // tekrar başka bir sprite seç
+            do
+            {
+                idx = UnityEngine.Random.Range(0, spriteCiftleri.Count);
+                cift = spriteCiftleri[idx];
+            }
+            while (cift.figur.name == "Fener");
+        }
+
+        secilenFigur = cift.figur;
+        secilenArkaPlan = cift.arkaPlan;
         uiImage.sprite = secilenFigur;
+
         zatenSecildi = true;
+
+        // FENER Mİ?
+        fenerMi = (!pathUzerinde && secilenFigur.name == "Fener");
+
     }
-
-
     public void EskiSpriteyeDon()
     {
         if (uiImage == null) return;
@@ -125,7 +145,8 @@ public class Node : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
     {
         if (uiImage == null) return;
         uiImage.sprite = AcikYolSprite;
+        fenerMi = false; // path’te beyaz olduysa fener özelliği gitsin
     }
-    #endregion
+        #endregion
 
 }

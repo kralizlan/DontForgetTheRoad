@@ -137,10 +137,10 @@ RectTransform:
   - {fileID: 4232653057082227010}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 765.61005, y: -1479.9045}
-  m_SizeDelta: {x: 445.3, y: 311.23}
+  m_AnchorMin: {x: 0.5, y: 0.15}
+  m_AnchorMax: {x: 1, y: 0.35}
+  m_AnchoredPosition: {x: -42.70996, y: -22.7406}
+  m_SizeDelta: {x: -98.04999, y: -107.073364}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3292766633269586351
 CanvasRenderer:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -269,10 +269,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5239083932499178421}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.2, y: -11}
-  m_SizeDelta: {x: 20.54, y: 10.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5057913695317361856
 CanvasRenderer:
@@ -324,8 +324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 3
 --- !u!1 &1885071318067396726
 GameObject:
@@ -361,10 +362,10 @@ RectTransform:
   - {fileID: 2295341983042463978}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.35, y: -1164.4746}
-  m_SizeDelta: {x: 445.3, y: 311.23}
+  m_AnchorMin: {x: 0.1, y: 0.3}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -17.650024, y: -11.540161}
+  m_SizeDelta: {x: 13.299988, y: -123.9466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4606167081687350375
 CanvasRenderer:
@@ -387,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -494,10 +495,10 @@ RectTransform:
   - {fileID: 5028133726662916278}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.35, y: -849.0447}
-  m_SizeDelta: {x: 445.3, y: 311.23}
+  m_AnchorMin: {x: 0.1, y: 0.45}
+  m_AnchorMax: {x: 0.5, y: 0.65}
+  m_AnchoredPosition: {x: -17.650024, y: -0.31976318}
+  m_SizeDelta: {x: 13.299988, y: -103.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2850542557328220179
 CanvasRenderer:
@@ -520,7 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -628,8 +629,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -7.5542, y: 16.4753}
-  m_SizeDelta: {x: 35.1084, y: 32.9508}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6278588472391771142
 CanvasRenderer:
@@ -681,8 +682,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 1
 --- !u!1 &3144028403148733480
 GameObject:
@@ -970,10 +972,10 @@ RectTransform:
   - {fileID: 69828559021121230}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 765.61005, y: -533.61456}
-  m_SizeDelta: {x: 445.3, y: 311.23}
+  m_AnchorMin: {x: 0.5, y: 0.6}
+  m_AnchorMax: {x: 1, y: 0.8}
+  m_AnchoredPosition: {x: -42.58098, y: 40.297}
+  m_SizeDelta: {x: -97.778, y: -68.594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4176125527743948295
 CanvasRenderer:
@@ -996,7 +998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1103,11 +1105,11 @@ RectTransform:
   - {fileID: 8169968290757634746}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.34998, y: -533.61456}
-  m_SizeDelta: {x: 445.3, y: 311.23}
-  m_Pivot: {x: 0.49999997, y: 0.5}
+  m_AnchorMin: {x: 0.1, y: 0.6}
+  m_AnchorMax: {x: 0.5, y: 0.8}
+  m_AnchoredPosition: {x: -19.099976, y: 41.32202}
+  m_SizeDelta: {x: 11.032227, y: -66.544}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5649445630671904952
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1129,7 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1235,7 +1237,6 @@ RectTransform:
   m_Children:
   - {fileID: 1836797419979190589}
   - {fileID: 8489972430353941368}
-  - {fileID: 583347985507041875}
   - {fileID: 6393753733293850013}
   - {fileID: 239929694734904952}
   m_Father: {fileID: 0}
@@ -1326,7 +1327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8489972430353941368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 583347985507041875}
   - {fileID: 1234780400669871980}
   m_Father: {fileID: 2463226631528204027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1788,10 +1790,10 @@ RectTransform:
   - {fileID: 5122436022863166617}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 765.61005, y: -849.0447}
-  m_SizeDelta: {x: 445.3, y: 311.23}
+  m_AnchorMin: {x: 0.5, y: 0.45}
+  m_AnchorMax: {x: 1, y: 0.65}
+  m_AnchoredPosition: {x: -44.389954, y: -4.1900024}
+  m_SizeDelta: {x: -94.70001, y: -95.579956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8137636814129161756
 CanvasRenderer:
@@ -1814,7 +1816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1990,6 +1992,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2057,10 +2060,10 @@ RectTransform:
   - {fileID: 3982818901006042297}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.35, y: -1479.9045}
-  m_SizeDelta: {x: 445.3, y: 311.23}
+  m_AnchorMin: {x: 0.1, y: 0.16}
+  m_AnchorMax: {x: 0.5, y: 0.3139}
+  m_AnchoredPosition: {x: -17.650024, y: 4.2530518}
+  m_SizeDelta: {x: 13.299988, y: -9.089996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1073138084743077778
 CanvasRenderer:
@@ -2083,7 +2086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2402,11 +2405,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2463226631528204027}
+  m_Father: {fileID: 8489972430353941368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 457, y: 143}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1926241287822222821
@@ -2611,10 +2614,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8448742640288272555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.2, y: -11}
-  m_SizeDelta: {x: 20.54, y: 10.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3409107421610012456
 CanvasRenderer:
@@ -2666,8 +2669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 6
 --- !u!1 &7557910518853614395
 GameObject:
@@ -2900,10 +2904,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7031095745941949829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.2, y: -11}
-  m_SizeDelta: {x: 20.54, y: 10.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8092159548092348267
 CanvasRenderer:
@@ -2955,8 +2959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 8
 --- !u!1 &7934329792145943386
 GameObject:
@@ -2991,10 +2996,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7101896155680763820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.2, y: -11}
-  m_SizeDelta: {x: 20.54, y: 10.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2781996088509643795
 CanvasRenderer:
@@ -3046,8 +3051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 5
 --- !u!1 &7992405816656467497
 GameObject:
@@ -3202,10 +3208,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5001268797439172816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.2, y: -11}
-  m_SizeDelta: {x: 20.54, y: 10.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1806510588753302696
 CanvasRenderer:
@@ -3257,8 +3263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 4
 --- !u!1 &8555549600891399241
 GameObject:
@@ -3293,10 +3300,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8533256778803306333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.2, y: -11}
-  m_SizeDelta: {x: 20.54, y: 10.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1195505323131900844
 CanvasRenderer:
@@ -3348,8 +3355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 7
 --- !u!1 &8775371359880048180
 GameObject:
@@ -3385,10 +3393,10 @@ RectTransform:
   - {fileID: 1296520125560166302}
   m_Father: {fileID: 1234780400669871980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 765.61005, y: -1164.4746}
-  m_SizeDelta: {x: 445.3, y: 311.23}
+  m_AnchorMin: {x: 0.5, y: 0.3}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -44.51999, y: -15.767578}
+  m_SizeDelta: {x: -94.96991, y: -145.77905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4691742031067957199
 CanvasRenderer:
@@ -3411,7 +3419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3501,7 +3509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &239929694734904952
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3596,10 +3604,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4569606285985834208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.2, y: -11}
-  m_SizeDelta: {x: 20.54, y: 10.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.6, y: 59.3}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3781040777811098994
 CanvasRenderer:
@@ -3651,8 +3659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510ddbe5298cf8439d540f4f5d1a3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kilitli: {fileID: 21300000, guid: f4c7420dbbe4d0946ad67ac361611265, type: 3}
-  Kilitsiz: {fileID: 21300000, guid: bb667eeaeff141947b17cd587c6807a4, type: 3}
+  Kilitli: {fileID: 21300000, guid: ecca41c7799aff0418f04e591f3e53ed, type: 3}
+  Kilitsiz: {fileID: 21300000, guid: e2a736e3d1e703349bb357407cd54b53, type: 3}
+  Basarili: {fileID: 21300000, guid: f1087f03ec90a8c44b619bb92b445c7e, type: 3}
   lvl: 2
 --- !u!1001 &773527835462658224
 PrefabInstance:

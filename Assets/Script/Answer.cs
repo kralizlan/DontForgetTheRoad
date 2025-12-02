@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -25,21 +25,32 @@ public class Answer : MonoBehaviour
         cevapDogruMu = false;
     }
 
-    public List<Node> GetCevaplar()
-    {
-        return Cevaplar;
-    }
-
     public void CevapEkle(Node node)
     {
+        if (node.fenerMi)
+        {
+            Path.instance.FenerOzelligi(node);
+            return;
+        }
+        // önce cevap kontrolü (doğru / yanlış)
         CheckCevap(node);
-        Cevaplar.Add(node);
+
+        if (!Cevaplar.Contains(node))
+            Cevaplar.Add(node);
+
+
     }
+
+
 
     public void ResetCevaplar()
     {
         Cevaplar.Clear();
         DogruCevaplar.Clear();
+    }
+    public bool CevaptaVarMi(Node n)
+    {
+        return DogruCevaplar.Contains(n);
     }
 
     //path[0].AcikYol(); duzelt Path.HidePath
@@ -93,7 +104,7 @@ public class Answer : MonoBehaviour
         }
         foreach (var item in DogruCevaplar)
         {
-            if (node==item)
+            if (node == item)
             {
                 return;
             }

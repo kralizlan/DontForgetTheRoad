@@ -54,7 +54,7 @@ public class TimerDisplay : MonoBehaviour
             BolumBaslat();
         }
     }
-    
+
     public void BolumBaslat()
     {
         Game.instance.isStarting = true;

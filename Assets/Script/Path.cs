@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class Path : MonoBehaviour
 
     private void Awake()
     {
-         instance = this;
+        instance = this;
     }
 
     Node StartNode;
@@ -21,7 +22,6 @@ public class Path : MonoBehaviour
         path.Clear();
         ClosedList.Clear();
         neighbors.Clear();
-        
         Answer.instance.ResetCevaplar();
 
         int randomColumn = Random.Range(0, grid.Column);
@@ -99,17 +99,14 @@ public class Path : MonoBehaviour
                 }
                 availableNeighbors.Clear();
                 neighbors.Clear();
-                // Güncelleme işlemi
+
                 currentNode = nextNode;
                 gir = false;
             }
 
         }
 
-
     }
-
-
 
 
     public void ShowPath(Grid g)
@@ -123,25 +120,84 @@ public class Path : MonoBehaviour
             path[i].AcikYol();
         }
     }
+    public void FenerOzelligi(Node merkez)
+    {
+        StartCoroutine(FenerRoutine(merkez, Grid.instance));
+    }
 
-    public void HidePath(Grid grid,bool bulutgecisi=false)
+    private IEnumerator FenerRoutine(Node merkez, Grid grid)
+    {
+        List<Node> acilanlar = new List<Node>();
+
+        for (int ix = merkez.x - 1; ix <= merkez.x + 1; ix++)
+        {
+            for (int iy = merkez.y - 1; iy <= merkez.y + 1; iy++)
+            {
+                if (ix < 0 || iy < 0 || ix >= grid.Row || iy >= grid.Column)
+                    continue;
+
+                Node n = grid.nodes[ix, iy];
+
+                bool pathUzerinde = path.Contains(n);
+                bool cevaptaVar = Answer.instance.CevaptaVarMi(n);
+
+                if (cevaptaVar)
+                {
+                    // Cevapta olanlar KALICI açık
+                    n.AcikYol();
+                }
+                else if (pathUzerinde)
+                {
+                    // Path üzerinde ama cevapta değil → geçici olarak göster
+                    n.AcikYol();
+                    acilanlar.Add(n); // Sonra geri dönecek
+                }
+                else
+                {
+                    // Normal node → geçici rastgele sprite
+                    n.RastgeleSpriteAta();
+                    acilanlar.Add(n);
+                }
+            }
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        foreach (var n in acilanlar)
+        {
+            // Bu sırada oyuncu doğru cevaba tıklamış olabilir
+            bool cevaptaVar = Answer.instance.CevaptaVarMi(n);
+
+            if (cevaptaVar)
+            {
+                n.AcikYol();      // Artık cevapta, açık kalsın
+            }
+            else
+            {
+                n.EskiSpriteyeDon();
+            }
+        }
+
+    }
+
+    public void HidePath(Grid grid, bool bulutgecisi = false)
     {
         foreach (var item in grid.nodes)
         {
             item.EskiSpriteyeDon();
             if (bulutgecisi)
             {
-                item.AlphaBekleVeAc(0,0.5f);
+                item.AlphaBekleVeAc(0, 0.5f);
             }
         }
-    //    path[0].AcikYol();
-        
+        //    path[0].AcikYol();
+
     }
     public void CevaplarPath(List<Node> Nodes)
     {
         foreach (var item in Nodes)
         {
-          item.AcikYol();
+            item.AcikYol();
         }
     }
 

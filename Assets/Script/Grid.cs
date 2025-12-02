@@ -22,10 +22,11 @@ public class Grid : MonoBehaviour
     }
     public void CreatePath()
     {
-    
+
         if (Path.instance != null)
         {
             Path.instance.RandomPath(this);
+         
         }
         else
         {
