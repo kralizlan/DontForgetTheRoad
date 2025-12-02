@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4206469531600235974, guid: 06696157471c7ff49825f71a42476a61, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 936.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5253477625413684458, guid: 06696157471c7ff49825f71a42476a61, type: 3}
       propertyPath: m_Name
       value: OyunEkrani
@@ -242,6 +246,18 @@ PrefabInstance:
     - target: {fileID: 5307431793256067766, guid: 06696157471c7ff49825f71a42476a61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069364670202753438, guid: 06696157471c7ff49825f71a42476a61, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529387855399404663, guid: 06696157471c7ff49825f71a42476a61, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1946.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529387855399404663, guid: 06696157471c7ff49825f71a42476a61, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1019.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
