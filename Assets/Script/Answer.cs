@@ -124,7 +124,6 @@ public class Answer : MonoBehaviour
             DogruCevaplar.Add(node);
             ++CevapSayisi;
             cevapDogruMu = true;
-            ComboBar.instance.AddCombo(0.15f);
             node.AcikYol();
             if (Path.instance.path.Count == CevapSayisi)
             {
@@ -146,7 +145,7 @@ public class Answer : MonoBehaviour
             node.RastgeleSpriteAta();
             AudioManager.instance.YanlisTiklamaSesiCal();
             Oyuncu.instance.CanAzalt(node);
-            StartCoroutine(AyniBolumuYenidenBaslat());
+        //    StartCoroutine(AyniBolumuYenidenBaslat());
         }
     }
 

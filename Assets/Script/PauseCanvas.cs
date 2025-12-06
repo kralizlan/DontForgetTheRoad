@@ -5,24 +5,20 @@ using UnityEngine.UI;
 
 public class PauseCanvas : MonoBehaviour
 {
-
     public GameObject Pausecanvas;
     public GameObject BolumBittiCanvas;
 
-    private void Start()
-    {
-        //AdManager.instance.HideBannerAd();
+    public static PauseCanvas insance;
 
+    private void Awake()
+    {
+        insance = this;
     }
-    private void Update()
+    public void BolumBitti()
     {
-        if (Game.instance.LevelBittiMi)
-        {
-            Game.instance.PauseGame();
-            Path.instance.HidePath(Grid.instance);
-            BolumBittiCanvas.gameObject.SetActive(true);
-        }
-
+        Game.instance.PauseGame();
+        Path.instance.HidePath(Grid.instance);
+        BolumBittiCanvas.gameObject.SetActive(true);
     }
     public void PauseGame()
     {
@@ -37,12 +33,11 @@ public class PauseCanvas : MonoBehaviour
     }
     public void DevamEdenOyun()
     {
-        Game.instance.NewGame();
-        Pausecanvas.gameObject.SetActive(false);
+        BolumBittiCanvas.gameObject.SetActive(false);
+        Game.instance.ResumeGame();
     }
     public void AnaMenu()
     {
-        AdManager.Instance.ShowBanner();
         Game.instance.ResumeGame();
         Game.instance.LevelBittiMi = false;
         SceneManager.LoadScene(0);
@@ -90,6 +85,7 @@ public class PauseCanvas : MonoBehaviour
         PlayerPrefs.SetInt("SelectedLevel", x);
         PlayerPrefs.Save();
         SceneManager.LoadScene(1);
+        Debug.Log("level atlama bas");
     }
 
 

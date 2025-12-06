@@ -19,12 +19,7 @@ public class ComboBar : MonoBehaviour
     }
     void Update()
     {
-        if (currentFill > 0&& !TimerDisplay.instance.SayacAzalsinMi&&Game.instance.isStarting)
-        {
-            // Zamanla barın boşalmasını sağla
-            currentFill -= Time.deltaTime * 0.3f;
-            comboBarFill.fillAmount = Mathf.Clamp01(currentFill);
-        }
+ 
     }
 
     public void AddCombo(float amount)

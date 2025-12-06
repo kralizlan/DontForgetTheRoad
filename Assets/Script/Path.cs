@@ -36,26 +36,27 @@ public class Path : MonoBehaviour
         while (true)
         {
             bool gir = true;
-            // Kullanılabilir komşuları bul
+
             neighbors = currentNode.FindNeighbors(grid.nodes, grid.Row, grid.Column);
             List<Node> availableNeighbors = new List<Node>();
 
-
-            // Eğer hedef noktaya ulaşıldıysa çık
+            // hedef (ilk satır) geldiysek bitir
             if (currentNode.x == 0)
             {
-
                 return path;
             }
 
             foreach (Node neighbor in neighbors)
             {
-                if (!ClosedList.Contains(neighbor))
-                {
-                    availableNeighbors.Add(neighbor);
-                }
-            }
+                if (ClosedList.Contains(neighbor))
+                    continue;
 
+                // SON satırdaysak, tekrar SON satırdan komşu seçme
+                if (currentNode.x == grid.Row - 1 && neighbor.x == grid.Row - 1)
+                    continue;
+
+                availableNeighbors.Add(neighbor);
+            }
 
             if (availableNeighbors.Count == 0)
             {
@@ -70,26 +71,20 @@ public class Path : MonoBehaviour
                 StartNode = grid.nodes[grid.Row - 1, randomColumn];
 
                 path.Add(StartNode);
-
                 ClosedList.Add(StartNode);
 
                 currentNode = StartNode;
-
                 gir = false;
             }
 
             if (gir)
             {
-
-                // Rastgele bir komşu düğüm seç
                 int randomIndex = Random.Range(0, availableNeighbors.Count);
                 Node nextNode = availableNeighbors[randomIndex];
 
-                // Seçilen düğümü yola ekle ve beyaz yap
                 path.Add(nextNode);
                 ClosedList.Add(nextNode);
 
-                // Kullanılmayan komşuları siyah yap ve kapalı listeye ekle
                 foreach (Node neighbor in neighbors)
                 {
                     if (!ClosedList.Contains(neighbor))
@@ -97,16 +92,16 @@ public class Path : MonoBehaviour
                         ClosedList.Add(neighbor);
                     }
                 }
+
                 availableNeighbors.Clear();
                 neighbors.Clear();
 
                 currentNode = nextNode;
                 gir = false;
             }
-
         }
-
     }
+
 
 
     public void ShowPath(Grid g)

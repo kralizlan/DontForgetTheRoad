@@ -7,15 +7,14 @@ using UnityEngine.UI;
 
 public class Oyuncu : MonoBehaviour
 {
+    public static Oyuncu instance;
     [SerializeField] GameObject GameoverScreen;
     public int CanSayisi;
-    private int AltinMiktari;
     public int Skor;
     private float SkorCarpani;
-    public Image image;
+    [HideInInspector] public Image image;
     public TextMeshProUGUI SkorTxt;
-    public static Oyuncu instance;
-
+    public Scrollbar SkorBar;
 
     private void Awake()
     {
@@ -44,7 +43,7 @@ public class Oyuncu : MonoBehaviour
 
         if (CanSayisi == 1)
         {
-            GameoverScreen.GetComponent < Image>().sprite = x.secilenArkaPlan;
+            GameoverScreen.GetComponent<Image>().sprite = x.secilenArkaPlan;
             Game.instance.Bekle(1f, Game.instance.GameoverCanvasAc);
             Game.instance.GameOver();
         }
@@ -76,6 +75,7 @@ public class Oyuncu : MonoBehaviour
     }
     public void SkorYazdir()
     {
+        SkorBar.value = (float)Skor / 10;
         SkorTxt.text = Skor.ToString();
     }
 

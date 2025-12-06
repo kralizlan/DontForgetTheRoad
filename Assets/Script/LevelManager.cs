@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt("Level", Level);
             PlayerPrefs.Save();
             Game.instance.LevelBittiMi =true;
+            PauseCanvas.insance.BolumBitti();
             if (Level == 3)
             {
                 Debug.Log("degerlendir ");
