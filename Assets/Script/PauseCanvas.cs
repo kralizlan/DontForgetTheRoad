@@ -8,7 +8,6 @@ public class PauseCanvas : MonoBehaviour
 
     public GameObject Pausecanvas;
     public GameObject BolumBittiCanvas;
-    private bool bolumbitti = false;
 
     private void Start()
     {
@@ -17,44 +16,39 @@ public class PauseCanvas : MonoBehaviour
     }
     private void Update()
     {
-        if (Game.instance.LevelUpBildirisi.activeSelf)
+        if (Game.instance.LevelBittiMi)
         {
-            if (!bolumbitti)
-            {
-                bolumbitti = true;
-                Game.instance.PauseGame();
-                Path.instance.HidePath(Grid.instance);
-                BolumBittiCanvas.gameObject.SetActive(true);
-            }
+            Game.instance.PauseGame();
+            Path.instance.HidePath(Grid.instance);
+            BolumBittiCanvas.gameObject.SetActive(true);
         }
 
     }
     public void PauseGame()
     {
-        //     AdManager.instance.ShowBannerAd();
         Game.instance.PauseGame();
-        Path.instance.HidePath(Grid.instance);
         Pausecanvas.gameObject.SetActive(true);
     }
     public void ResumeGame()
     {
-        //  AdManager.instance.HideBannerAd();
         Game.instance.ResumeGame();
         Pausecanvas.gameObject.SetActive(false);
-        BolumBittiCanvas.gameObject.SetActive(false);
         Path.instance.CevaplarPath(Answer.instance.DogruCevaplar);
+    }
+    public void DevamEdenOyun()
+    {
+        Game.instance.NewGame();
+        Pausecanvas.gameObject.SetActive(false);
     }
     public void AnaMenu()
     {
         AdManager.Instance.ShowBanner();
         Game.instance.ResumeGame();
-        Game.instance.LevelUpBildirisi.SetActive(false);
-        ComboBar.instance.NewGame();
+        Game.instance.LevelBittiMi = false;
         SceneManager.LoadScene(0);
     }
     public void Restart()
     {
-
         Game.instance.ResumeGame();
         SceneManager.LoadScene(1); // Hedef sahneye git
     }

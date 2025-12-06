@@ -10,7 +10,7 @@ public class Game : MonoBehaviour
     public int difficulty;
     public bool isPause;
     public GameObject GameOverCanvas;
-    public GameObject LevelUpBildirisi;
+    public bool LevelBittiMi =false;
 
     private void Awake()
     {

@@ -37,10 +37,11 @@ public class LevelManager : MonoBehaviour
             ++Level;
             PlayerPrefs.SetInt("Level", Level);
             PlayerPrefs.Save();
-            Game.instance.LevelUpBildirisi.SetActive(true);
+            Game.instance.LevelBittiMi =true;
             if (Level == 3)
             {
-                Debug.Log("degerlendi ");
+                Debug.Log("degerlendir ");
+
             }
         }
     }

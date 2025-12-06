@@ -127,41 +127,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 428163312105278812, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 428163312105278812, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 428163312105278812, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 428163312105278812, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 428163312105278812, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 18.400024
-      objectReference: {fileID: 0}
-    - target: {fileID: 428163312105278812, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -372
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518591429873202592, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518591429873202592, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4206469531600235974, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 936.5
+    - target: {fileID: 3764933786845666720, guid: 06696157471c7ff49825f71a42476a61, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DevamEdenOyun
       objectReference: {fileID: 0}
     - target: {fileID: 5253477625413684458, guid: 06696157471c7ff49825f71a42476a61, type: 3}
       propertyPath: m_Name
@@ -246,18 +214,6 @@ PrefabInstance:
     - target: {fileID: 5307431793256067766, guid: 06696157471c7ff49825f71a42476a61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069364670202753438, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529387855399404663, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -1946.9998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529387855399404663, guid: 06696157471c7ff49825f71a42476a61, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1019.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
